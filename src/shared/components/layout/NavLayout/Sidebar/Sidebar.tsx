@@ -11,6 +11,7 @@ import routes from "../../../../../routes/routes";
 import {CircleIcon} from "../../../core-components/CircleIcon/CircleIcon";
 import icon from "../../../../../assests/img/logo.svg"
 import {Bookmark} from "../../../core-components/Bookmark/Bookmark";
+
 interface Props {
     collapsed: boolean;
     toggled: boolean;
@@ -21,8 +22,9 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
 
     const {theme} = useContext(ThemeContext);
     return (
-        <div style={{display: "flex"}}>
-            <ProSidebar onToggle={handleToggleSidebar} toggled={toggled} collapsed={collapsed}
+        <div style={{display: "flex", backgroundColor:"black"}}>
+            <ProSidebar  onToggle={handleToggleSidebar}
+                        toggled={toggled} collapsed={collapsed}
                         className={"sidebar"}  {...(theme ? {"data-theme": theme} : {})} breakPoint="md">
                 <SidebarHeader>
                     <img src={logo}/>
@@ -34,7 +36,8 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                             return (
                                 <SubMenu key={index} icon={item.icon} className="sidebar-menu-item" title={item.title}>
                                     {("subMenu" in item) && item.subMenu?.map((subItem, subIndex) => {
-                                        return <MenuItem onClick={() => window.location.href = '/' + item.path} key={subIndex} icon={subItem.icon}>{subItem.title} </MenuItem>
+                                        return <MenuItem onClick={() => window.location.href = '/' + item.path}
+                                                         key={subIndex} icon={subItem.icon}>{subItem.title} </MenuItem>
                                     })}
                                 </SubMenu>)
                         } else {
@@ -48,17 +51,17 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                 </Menu>
 
             </ProSidebar>
-<div style={{overflowY: "auto",width:"100%"}}>
-            <BrowserRouter>
-                <Routes>
-                    {routes.map((route, index) => {
+            <div className={"sidebar-main"} style={{ width: "100%",backgroundColor:"black"}}>
+                <BrowserRouter>
+                    <Routes>
+                        {routes.map((route, index) => {
 
-                        return <Route key={index} path={route.path} element={<route.component/>}/>
-                    })}
-                </Routes>
-            </BrowserRouter>
+                            return <Route key={index} path={route.path} element={<route.component/>}/>
+                        })}
+                    </Routes>
+                </BrowserRouter>
 
-</div>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,9 @@
+.navLayout{
+  display: inline-flex;
+  &-main{
+flex:1;
+  }
+  &-sidebar{
+flex:3;
+  }
+}
