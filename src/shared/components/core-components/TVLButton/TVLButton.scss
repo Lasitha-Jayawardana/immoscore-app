@@ -1,0 +1,26 @@
+.tvlButton {
+  color: rgb(33, 114, 229);
+  background-color: rgba(33, 114, 229, 0.1);
+  min-width: fit-content;
+  border-radius: 12px;
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+
+  &-active {
+    background-color: rgb(33, 114, 229);
+    color: white;
+  }
+
+  &:hover {
+    background-color: rgb(22, 91, 189);
+  }
+
+  &-inner-container {
+
+  }
+}

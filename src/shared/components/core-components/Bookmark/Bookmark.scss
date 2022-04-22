@@ -1,0 +1,23 @@
+.bookmark {
+  display: flex;
+
+  align-items: center;
+
+
+  & span {
+    background-color: black;
+    display: inline-block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+
+    color: white;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+
+
+
+}

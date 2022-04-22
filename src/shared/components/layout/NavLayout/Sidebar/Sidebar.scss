@@ -1,0 +1,31 @@
+:root {
+  --sidebar-bg-color: #384991;
+  --submenu-bg-color: #384991;
+
+}
+
+[data-theme='dark'] {
+
+  --sidebar-bg-color: #384991;
+  --submenu-bg-color: #384991;
+}
+
+
+$icon-bg-color: var(--sidebar-bg-color);
+$highlight-color: rgb(255, 255, 255);
+$sidebar-bg-color: var(--sidebar-bg-color);
+$submenu-bg-color: var(--submenu-bg-color);
+
+@import '../../../../../../node_modules/react-pro-sidebar/dist/scss/styles';
+
+.sidebar {
+  height: 100vh;
+
+  &-menu-item {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Inter var", sans-serif;
+    color: #a1a8cb;
+  }
+
+}

@@ -1,0 +1,61 @@
+.colorCard {
+  color: white;
+  margin: 3px 14px 0px;
+  padding: 20px 20px 32px;
+  border: 1px solid #40444f;
+  border-radius: 24px;
+  text-decoration: none;
+  position: relative;
+&-external-icon{
+  color: rgb(255, 255, 255) !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+  &-disable{
+    opacity: .65;
+   pointer-events: none;
+  }
+  &-logo-container {
+    display: flex;
+    margin: 16px;
+    flex-direction: column;
+
+  }
+  &-logo {
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    box-shadow: inset 3px 2px 6px 0 rgba(0,0,0,.2);
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    -webkit-box-shadow: inset 3px 2px 6px 0 rgba(0,0,0,.2);
+  }
+
+  &-title {
+    margin: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    & h2{
+      font-weight: 600;
+    }
+  }
+
+  &-desc {
+    margin: 10px 15px;
+    text-align: center;
+    color: white;
+    & p{
+      font-size: 16px !important;
+      opacity: .7;
+      font-weight: 400;
+    }
+  }
+
+
+}

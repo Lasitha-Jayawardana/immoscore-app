@@ -1,0 +1,55 @@
+.labelCard {
+  &-inner-container {
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 4px;
+    font-size: 14px;
+    font-family: "Inter var", sans-serif;
+    padding: 18px 25px;
+  }
+
+  &-container {
+
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid rgb(64, 68, 79);
+
+    position: relative;
+    background-color: rgb(29, 32, 44);
+  }
+
+  &-title {
+    width: 100%;
+    display: flex;
+    padding: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    color: rgb(250, 250, 250);
+    font-weight: 500;
+    font-size: 16px;
+    font-variant: no-common-ligatures no-discretionary-ligatures no-historical-ligatures no-contextual;
+    box-sizing: border-box;
+  }
+
+  &-value {
+    width: 100%;
+    display: flex;
+    padding: 0px;
+    -webkit-box-align: center;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 4px;
+    margin-bottom: -6px;
+
+    font-family: "Inter var", sans-serif;
+    line-height: 39px;
+    font-weight: 600;
+    font-size: 33px;
+  }
+}

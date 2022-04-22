@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../../assests/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../assests/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../../assests/fonts/Poppins-Light.ttf') format('truetype');
+}

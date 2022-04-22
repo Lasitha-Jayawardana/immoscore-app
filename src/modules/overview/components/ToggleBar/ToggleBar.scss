@@ -1,0 +1,17 @@
+.toggleBar {
+   display: table;
+width: 100%;
+  background-color: black;
+
+  &>ul{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px;
+    padding: 0px;
+    list-style: none;
+  }
+& li{
+  list-style: none;
+  margin: auto 5px;
+}
+}

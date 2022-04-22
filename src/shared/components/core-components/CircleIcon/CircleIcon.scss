@@ -1,0 +1,44 @@
+:root{
+
+}
+
+
+.circleIcon {
+  --size :24px;
+  display: flex;
+
+  align-items: center;
+
+
+  & span {
+    background-color: black;
+    display: inline-block;
+    overflow: hidden;
+    width: var(--size);
+    height: var(--size);
+    border-radius: calc((var(--size)/2));
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+
+  & img {
+
+    position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+
+    border: none;
+    margin: auto;
+
+
+    width: 70%;
+
+    height: 70%;
+
+  }
+
+
+}
