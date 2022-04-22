@@ -15,7 +15,7 @@ export const NameCell: FC<Props> = (props) => {
         <div   className={"nameCell"}>
 <Bookmark/>
             <CellText text={props.id} color={"gray"}/>
-            <CircleIcon icon={Icon}/>
+            <CircleIcon icon={Icon} size={"48px"}/>
             <CellText text={props.text} color={"rgb(33, 114, 229)"}/>
 
 
