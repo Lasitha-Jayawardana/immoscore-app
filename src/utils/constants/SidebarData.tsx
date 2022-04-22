@@ -32,10 +32,6 @@ export const SidebarMenuData:SidebarMenu[] = [
         icon: <FaIcons.FaGripfire/>,
         title: 'Landlords',
         path: "#Landlords",
-    }, {
-        icon: <FaIcons.FaMagento/>,
-        title: 'Ponols',
-        path: "#Ponols",
     },
     {
         title: "Pools",
