@@ -1,0 +1,48 @@
+.wallet {
+position: relative;
+  color: white;
+  &-close-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: 10;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    & span{
+      display: block;
+      width: 56px;
+      height: 56px;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 56px;
+      text-align: center;
+      text-transform: none;
+      text-rendering: auto;
+    }
+
+  }
+
+&-container{
+  padding: 24px 40px;
+}
+&-top-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h3{
+    margin: auto;
+  }
+  & p{
+    margin: auto;
+  }
+}
+}

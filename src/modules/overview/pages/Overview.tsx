@@ -5,6 +5,7 @@ import {TVLBar} from "../components/TVLBar/TVLBar";
 import './Overview.scss'
 import {Table} from "../../../shared/components/core-components/Table/Table";
 import {ColumnData, TableData} from "../../../utils/constants/TableData";
+import {Modal} from "../../../shared/components/layout/Modal/Modal";
 
 export const Overview: FC = (props) => {
     const columns = useMemo(
@@ -12,7 +13,7 @@ export const Overview: FC = (props) => {
         []);
     return (<div className={"overview"}>
             <br/>
-
+<Modal isOpen={true}/>
             <Hero></Hero>
             <ToggleBar/>
             <TVLBar/>

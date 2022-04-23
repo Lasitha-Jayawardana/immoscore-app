@@ -43,7 +43,7 @@ const currencySeries = new TimeSeries({
 });
 
 const style = styler([
-    { key: "aud", color: "steelblue", width: 2 },
+    { key: "aud", color: "steelblue", width: 3 },
     { key: "euro", color: "#F68B24", width: 2 }
 ]);
 
@@ -96,7 +96,7 @@ export class Currency extends React.Component {
         if (this.state.tracker) {
             const index = currencySeries.bisect(this.state.tracker);
             const trackerEvent = currencySeries.at(index);
-            audValue = `${f(trackerEvent.get("aud"))} b`;
+            audValue = `${f(trackerEvent.get("aud"))} K`;
             euroValue = `${f(trackerEvent.get("euro"))}`;
         }
 
@@ -156,7 +156,7 @@ export class Currency extends React.Component {
                                 <ChartRow height="400">
                                     <YAxis
                                         id="y"
-                                        label="($) Billion"
+                                        label="($) K"
                                         min={0.5}
                                         max={1.5}
                                         style={{

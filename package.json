@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-modal": "^3.13.1",
     "@types/react-toggle": "^4.0.3",
     "underscore": "^1.13.2"
   }
