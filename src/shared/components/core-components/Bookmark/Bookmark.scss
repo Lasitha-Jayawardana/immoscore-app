@@ -6,10 +6,8 @@
 
   & span {
     background-color: black;
-    display: inline-block;
+    display: flex;
     overflow: hidden;
-    width: 16px;
-    height: 16px;
 
     color: white;
     border: 0px;
@@ -18,6 +16,10 @@
     position: relative;
   }
 
-
+& svg{
+  margin: auto;
+  width: 16px;
+  height: 16px;
+}
 
 }

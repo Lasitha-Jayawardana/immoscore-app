@@ -10,18 +10,17 @@ export const TVLBar: FC = (props) => {
                     TVL Rankings
                 </div>
                 <div className={"TVLBar-button-container"}>
-                    <TVLButton active={true} text={"All"} onClick={() => {
+                    <TVLButton active={true} text={"Global"} onClick={() => {
                     }}/>
-                    <TVLButton active={false} text={"Ethereum"} onClick={() => {
+                    <TVLButton active={false} text={"Austria"} onClick={() => {
                     }}/>
-                    <TVLButton active={false} text={"Terra"} onClick={() => {
+                    <TVLButton active={false} text={"Belgium"} onClick={() => {
                     }}/>
-                    <TVLButton active={false} text={"BSC"} onClick={() => {
+                    <TVLButton active={false} text={"Croatia"} onClick={() => {
                     }}/>
-                    <TVLButton active={false} text={"Avalanche"} onClick={() => {
+                    <TVLButton active={false} text={"France"} onClick={() => {
                     }}/>
-                    <TVLButton active={false} text={"Fantom"} onClick={() => {
-                    }}/>
+
                 </div>
             </div>
 

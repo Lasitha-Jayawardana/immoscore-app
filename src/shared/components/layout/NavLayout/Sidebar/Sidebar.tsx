@@ -3,7 +3,7 @@ import {ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader} from 'react-pro-side
 import "./Sidebar.scss"
 import React, {FC, useContext} from "react";
 import {ThemeContext} from "../../../../../utils/providers/ThemeContextProvider";
-import logo from '../../../../../assests/img/logo.svg'
+import logo from '../../../../../assests/img/immoscore-logo.svg'
 import {SidebarMenuData} from "../../../../../utils/constants/SidebarData";
 import {Overview} from "../../../../../modules/overview/pages/Overview";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
@@ -27,7 +27,7 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                         toggled={toggled} collapsed={collapsed}
                         className={"sidebar"}  {...(theme ? {"data-theme": theme} : {})} breakPoint="md">
                 <SidebarHeader>
-                    <img src={logo}/>
+                    <img className={"sidebar-logo"} src={logo}/>
                 </SidebarHeader>
 
                 <Menu popperArrow={true} iconShape="square">
@@ -41,7 +41,7 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                                     })}
                                 </SubMenu>)
                         } else {
-                            return <MenuItem onClick={() => window.location.href = '/' + item.path} icon={item.icon}
+                            return <MenuItem className="sidebar-menu-item" onClick={() => window.location.href = '/' + item.path} icon={item.icon}
                                              key={index}>{item.title}  </MenuItem>
 
                         }

@@ -16,17 +16,12 @@ export const ToggleBar: FC = (props) => {
                     <Toggle checked={checked} label={"Staking"} onToggle={handleChange}/>
                 </li>
                 <li>
-                    <Toggle checked={checked} label={"Pool2"} onToggle={handleChange}/>
-
+                    <Toggle checked={checked} label={"Lending"} onToggle={handleChange}/>
                 </li>
                 <li>
-                    <Toggle checked={checked} label={"Borrows"} onToggle={handleChange}/>
-
+                    <Toggle checked={checked} label={"Total"} onToggle={handleChange}/>
                 </li>
-                <li>
-                    <Toggle checked={checked} label={"Double Count"} onToggle={handleChange}/>
 
-                </li>
             </ul>
         </div>
     )

@@ -1,17 +1,20 @@
 .pools {
   background-color: black;
-height: 100vh;
+  height: 100vh;
   width: 100%;
   overflow-y: auto;
-  &-container{
 
+  &-container {
+    margin-top: 20px;
   }
-  &-row-container{
-display: flex;
+
+  &-row-container {
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-    &-card-container{
+
+  &-card-container {
 
   }
 }
