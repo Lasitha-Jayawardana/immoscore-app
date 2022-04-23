@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useState} from "react";
 import ReactModal from 'react-modal';
 import {ConnectWallet} from "../../core-components/ConnectWallet/ConnectWallet";
-
+import "./Modal.scss"
 const customStyles = {
     content: {
         top: '50%',
@@ -48,6 +48,7 @@ export const Modal: FC<Props> = (props) => {
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Connect Wallet"
+                overlayClassName={"modal-overlay"}
             >
                 <ConnectWallet onClose={closeModal}/>
                 {props.children}

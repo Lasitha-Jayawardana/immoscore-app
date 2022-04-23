@@ -1,9 +1,8 @@
 .modal{
-  display: inline-flex;
-  &-main{
-flex:1;
-  }
-  &-sidebar{
-flex:3;
+  &-overlay{
+    z-index: 99999;
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }

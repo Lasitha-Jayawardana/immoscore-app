@@ -13,7 +13,7 @@ export const Overview: FC = (props) => {
         []);
     return (<div className={"overview"}>
             <br/>
-<Modal isOpen={true}/>
+
             <Hero></Hero>
             <ToggleBar/>
             <TVLBar/>
