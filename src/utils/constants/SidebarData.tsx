@@ -42,7 +42,7 @@ export const SidebarMenuData:SidebarMenu[] = [
     },
 {
         title: "Learn",
-        icon: <FaIcons.FaSellsy/>,
+        icon: <FaIcons.FaBook/>,
         path: "learn",
         isSubMenu: false,
 
