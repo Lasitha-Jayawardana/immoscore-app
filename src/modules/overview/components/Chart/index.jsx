@@ -23,22 +23,22 @@ import {
 import currency_docs from "./currency_docs.md";
 
 // Data
-const aud = require("./usd_vs_aud.json");
-const euro = require("./usd_vs_euro.json");
+// const aud = require("./usd_vs_aud.json");
+const aud = require("./usd_new.json");
 
 function buildPoints() {
     const audPoints = aud.widget[0].data.reverse();
-    const euroPoints = euro.widget[0].data.reverse();
+
     let points = [];
     for (let i = 0; i < audPoints.length; i++) {
-        points.push([audPoints[i][0], audPoints[i][1], euroPoints[i][1]]);
+        points.push([audPoints[i][0], audPoints[i][1]*20000]);
     }
     return points;
 }
 
 const currencySeries = new TimeSeries({
     name: "Currency",
-    columns: ["time", "aud", "euro"],
+    columns: ["time", "aud"],
     points: buildPoints()
 });
 
@@ -96,8 +96,8 @@ export class Currency extends React.Component {
         if (this.state.tracker) {
             const index = currencySeries.bisect(this.state.tracker);
             const trackerEvent = currencySeries.at(index);
-            audValue = `${f(trackerEvent.get("aud"))} K`;
-            euroValue = `${f(trackerEvent.get("euro"))}`;
+            audValue = `${f(trackerEvent.get("aud"))}`;
+
         }
 
         return (
@@ -114,7 +114,7 @@ export class Currency extends React.Component {
                                 selection={this.state.selection}
                                 onSelectionChange={selection => this.setState({ selection })}
                                 categories={[
-                                    { key: "aud", label: "Total TVL", value: audValue }
+                                    { key: "aud", label: "Total VL", value: audValue }
                                 ]}
                             />
                         </span>
@@ -156,9 +156,9 @@ export class Currency extends React.Component {
                                 <ChartRow height="400">
                                     <YAxis
                                         id="y"
-                                        label="($) K"
-                                        min={0.5}
-                                        max={1.5}
+                                        label="($)"
+                                        min={10000}
+                                        max={100000}
                                         style={{
                                             ticks: {
                                                 stroke: "#AAA",
@@ -171,7 +171,7 @@ export class Currency extends React.Component {
                                         showGrid
                                         hideAxisLine
                                         width="60"
-                                        type="linear"
+                                        type="log"
                                         format="$,.2f"
                                     />
                                     <Charts>

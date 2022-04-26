@@ -18,9 +18,7 @@ function App() {
             <ThemeProvider>
                 <div className={"app-container"}>
                     <NavLayout/>
-
                 </div>
-
             </ThemeProvider>
 
         </>
