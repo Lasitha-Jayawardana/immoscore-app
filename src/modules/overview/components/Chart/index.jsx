@@ -31,7 +31,7 @@ function buildPoints() {
 
     let points = [];
     for (let i = 0; i < audPoints.length; i++) {
-        points.push([audPoints[i][0], audPoints[i][1]*20000]);
+        points.push([audPoints[i][0], audPoints[i][1]]);
     }
     return points;
 }
@@ -158,7 +158,7 @@ export class Currency extends React.Component {
                                         id="y"
                                         label="($)"
                                         min={10000}
-                                        max={100000}
+                                        max={200000}
                                         style={{
                                             ticks: {
                                                 stroke: "#AAA",
