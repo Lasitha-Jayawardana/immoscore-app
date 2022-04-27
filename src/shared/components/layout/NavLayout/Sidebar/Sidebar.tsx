@@ -11,6 +11,7 @@ import routes from "../../../../../routes/routes";
 import {CircleIcon} from "../../../core-components/CircleIcon/CircleIcon";
 import icon from "../../../../../assests/img/logo.svg"
 import {Bookmark} from "../../../core-components/Bookmark/Bookmark";
+import {Modal} from "../../Modal/Modal";
 
 interface Props {
     collapsed: boolean;
@@ -54,8 +55,8 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                 </Menu>
 
             </ProSidebar>
-            <div className={"sidebar-main"} style={{width: "100%", backgroundColor: "black"}}>
-
+            <div id={"main"} className={"sidebar-main"} style={{width: "100%", backgroundColor: "black"}}>
+                <Modal  isOpen={true}/>
                     <Routes>
                         {routes.map((route, index) => {
 

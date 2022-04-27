@@ -43,14 +43,13 @@ export const Modal: FC<Props> = (props) => {
     return (
         <div>
             {/*<button onClick={openModal}>Open Modal</button>*/}
-            <ReactModal
+            <ReactModal parentSelector={()=> (document.getElementById('main')!)}
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Connect Wallet"
                 overlayClassName={"modal-overlay"}>
-
                 <ConnectWallet onClose={closeModal}/>
                 {props.children}
             </ReactModal>
