@@ -1,6 +1,7 @@
 .wallet {
   position: relative;
   color: white;
+  text-align: center;
 
   &-close-btn {
     position: absolute;
@@ -41,13 +42,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 
     & h3 {
-      margin: auto;
+      margin: 10px auto;
     }
 
     & p {
       margin: auto;
+    }
+  }
+
+  &-btn {
+    border-radius: 5px;
+    background-color: #2a83fa;
+    padding: 7px 10px;
+    border: none;
+    color: white;
+    &:hover{
+      opacity: 0.8;
     }
   }
 }

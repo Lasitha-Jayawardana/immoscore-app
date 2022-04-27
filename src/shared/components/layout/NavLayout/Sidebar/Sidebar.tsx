@@ -6,7 +6,7 @@ import {ThemeContext} from "../../../../../utils/providers/ThemeContextProvider"
 import logo from '../../../../../assests/img/immoscore-logo.svg'
 import {SidebarMenuData} from "../../../../../utils/constants/SidebarData";
 import {Overview} from "../../../../../modules/overview/pages/Overview";
-import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Link, Route, Routes, useNavigate} from "react-router-dom";
 import routes from "../../../../../routes/routes";
 import {CircleIcon} from "../../../core-components/CircleIcon/CircleIcon";
 import icon from "../../../../../assests/img/logo.svg"
@@ -19,11 +19,11 @@ interface Props {
 }
 
 export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) => {
-
+    const navigate = useNavigate();
     const {theme} = useContext(ThemeContext);
     return (
-        <div style={{display: "flex", backgroundColor:"black"}}>
-            <ProSidebar  onToggle={handleToggleSidebar}
+        <div style={{display: "flex", backgroundColor: "black"}}>
+            <ProSidebar onToggle={handleToggleSidebar}
                         toggled={toggled} collapsed={collapsed}
                         className={"sidebar"}  {...(theme ? {"data-theme": theme} : {})} breakPoint="md">
                 <SidebarHeader>
@@ -36,12 +36,15 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                             return (
                                 <SubMenu key={index} icon={item.icon} className="sidebar-menu-item" title={item.title}>
                                     {("subMenu" in item) && item.subMenu?.map((subItem, subIndex) => {
-                                        return <MenuItem onClick={() => window.location.href = '/' + item.path}
-                                                         key={subIndex} icon={subItem.icon}>{subItem.title} </MenuItem>
+                                        return <MenuItem
+                                            className={"sidebar-menu-item " + item.disable && "sidebar-disable"}
+                                            onClick={() => window.location.href = '/' + item.path}
+                                            key={subIndex} icon={subItem.icon}>{subItem.title} </MenuItem>
                                     })}
                                 </SubMenu>)
                         } else {
-                            return <MenuItem className="sidebar-menu-item" onClick={() => window.location.href = '/' + item.path} icon={item.icon}
+                            return <MenuItem className={"sidebar-menu-item " + (item.disable ? "sidebar-disable":"")}
+                                             onClick={() =>navigate('/' + item.path) } icon={item.icon}
                                              key={index}>{item.title}  </MenuItem>
 
                         }
@@ -51,15 +54,15 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                 </Menu>
 
             </ProSidebar>
-            <div className={"sidebar-main"} style={{ width: "100%",backgroundColor:"black"}}>
-                <BrowserRouter>
+            <div className={"sidebar-main"} style={{width: "100%", backgroundColor: "black"}}>
+
                     <Routes>
                         {routes.map((route, index) => {
 
                             return <Route key={index} path={route.path} element={<route.component/>}/>
                         })}
                     </Routes>
-                </BrowserRouter>
+
 
             </div>
         </div>

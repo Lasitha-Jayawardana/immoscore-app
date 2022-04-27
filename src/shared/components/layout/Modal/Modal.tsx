@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useState} from "react";
 import ReactModal from 'react-modal';
 import {ConnectWallet} from "../../core-components/ConnectWallet/ConnectWallet";
 import "./Modal.scss"
+
 const customStyles = {
     content: {
         top: '50%',
@@ -9,7 +10,7 @@ const customStyles = {
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        backgroundColor:"#4a4a4a",
+        backgroundColor: "#4a4a4a",
         transform: 'translate(-50%, -50%)',
         border: "1px solid rgb(45, 16, 212)",
         borderRadius: "24px",
@@ -19,7 +20,7 @@ const customStyles = {
 
 interface Props {
     children?: ReactNode;
-    isOpen:boolean;
+    isOpen: boolean;
 }
 
 export const Modal: FC<Props> = (props) => {
@@ -48,8 +49,8 @@ export const Modal: FC<Props> = (props) => {
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Connect Wallet"
-                overlayClassName={"modal-overlay"}
-            >
+                overlayClassName={"modal-overlay"}>
+
                 <ConnectWallet onClose={closeModal}/>
                 {props.children}
             </ReactModal>

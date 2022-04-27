@@ -22,6 +22,21 @@ import {
 } from "react-timeseries-charts";
 import currency_docs from "./currency_docs.md";
 
+// JS console code for creating curve
+//****************************************************************************************************************
+// arr1=[]
+// arr.forEach((element,index)=>{
+//     if (index != 0){
+//         element[1] =arr[index-1][1] - 550 + Math.floor(Math.random() * (700 - (-700)) ) + (-700);
+//
+//     }
+//     arr1[index]=element;
+//
+// });
+// arr1
+// *************************************************************************************************************
+
+
 // Data
 // const aud = require("./usd_vs_aud.json");
 const aud = require("./usd_new.json");

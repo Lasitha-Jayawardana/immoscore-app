@@ -4,12 +4,14 @@ export interface SubMenu{
     title: string;
     icon:any;
     path: string;
+    disable?:boolean;
 }
 export default interface SidebarMenu{
     title: string;
     icon:any;
     path?: string;
     isSubMenu?: boolean;
-    subMenu?:SubMenu[]
+    subMenu?:SubMenu[];
+    disable?:boolean;
 
 }

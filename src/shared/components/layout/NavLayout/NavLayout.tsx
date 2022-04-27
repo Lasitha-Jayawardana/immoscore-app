@@ -3,6 +3,7 @@ import * as FaIcons from "react-icons/fa";
 import {Sidebar} from "./Sidebar/Sidebar";
 import {Navbar} from "./Navbar/Navbar";
 import {Modal} from "../Modal/Modal";
+import {BrowserRouter} from "react-router-dom";
 
 export const NavLayout: FC = () => {
     const [toggled, setToggled] = useState(false);
@@ -13,9 +14,11 @@ export const NavLayout: FC = () => {
 
     return (
         <div>
+            <BrowserRouter>
             <Navbar handleToggleSidebar={handleToggleSidebar}/>
             <Modal isOpen={true}/>
             <Sidebar  handleToggleSidebar={handleToggleSidebar} collapsed={collapsed} toggled={toggled}/>
+            </BrowserRouter>
         </div>
     )
 

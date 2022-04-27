@@ -21,10 +21,13 @@ export const ConnectWallet: FC<Props> = (props) => {
             <div className={"wallet-container"}>
                 <div className={"wallet-top-container"}>
                     <CircleIcon icon={Icon} size={"72px"} bColor={"transparent"}/>
-                    <h3>Connect Wallet</h3>
-                    <p>To start using Immo App</p>
+                    <h3>Want Early Access?</h3>
+                    <p>We are allowing a select group of users
+                        to get first site access.</p>
                 </div>
                 <hr/>
+                <button className={"wallet-btn"}>Request Early Access</button>
+                <p>Immoscore is coming soon.</p>
                 <div>
 
                 </div>

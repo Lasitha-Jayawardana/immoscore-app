@@ -27,11 +27,14 @@ export const SidebarMenuData:SidebarMenu[] = [
         icon: <FaIcons.FaDeezer/>,
         title: 'Tenants',
         path: "#Tenants",
+        disable:true
 
     }, {
         icon: <FaIcons.FaGripfire/>,
         title: 'Landlords',
         path: "#Landlords",
+        disable:true
+
     },
     {
         title: "Pools",
