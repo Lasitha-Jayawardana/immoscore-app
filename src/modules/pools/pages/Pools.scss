@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   overflow-y: auto;
-
+  filter: blur(1px);
   &-container {
     margin-top: 20px;
   }

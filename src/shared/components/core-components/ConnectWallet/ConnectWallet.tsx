@@ -2,7 +2,7 @@ import {FC, ReactNode} from "react";
 import './ConnectWallet.scss'
 import {FaRegBookmark} from "react-icons/fa";
 import {CircleIcon} from "../CircleIcon/CircleIcon";
-import Icon from "../../../../assests/img/WalletConnect.svg"
+import Icon from "../../../../assests/img/immoscore.png"
 
 interface Props {
     onClose?: ()=>void;
@@ -20,10 +20,12 @@ export const ConnectWallet: FC<Props> = (props) => {
             </button>
             <div className={"wallet-container"}>
                 <div className={"wallet-top-container"}>
-                    <CircleIcon icon={Icon} size={"72px"} bColor={"transparent"}/>
+                    {/*<CircleIcon icon={Icon} size={"72px"} bColor={"transparent"}/>*/}
+                    {/*<div style={{height:"72px",width:"72px", borderRadius:"10px"}}>*/}
+                        <img style={{height:"72px" }} src={Icon}/>
+                    {/*</div>*/}
                     <h3>Want Early Access?</h3>
-                    <p>We are allowing a select group of users
-                        to get first site access.</p>
+                    <p>We are allowing a <b>selected</b> group of users to get the first access.</p>
                 </div>
                 <hr/>
                 <button className={"wallet-btn"}>Request Early Access</button>

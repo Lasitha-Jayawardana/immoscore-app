@@ -47,10 +47,8 @@ export const Sidebar: FC<Props> = ({collapsed, toggled, handleToggleSidebar}) =>
                             return <MenuItem className={"sidebar-menu-item " + (item.disable ? "sidebar-disable":"")}
                                              onClick={() =>navigate('/' + item.path) } icon={item.icon}
                                              key={index}>{item.title}  </MenuItem>
-
                         }
                     })}
-
 
                 </Menu>
 
