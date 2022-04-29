@@ -12,11 +12,11 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         // backgroundColor: "#4a4a4a",
-        background:'transparent',
+        background: 'transparent',
         transform: 'translate(-50%, -50%)',
         // border: "1px solid rgb(45, 16, 212)",
         border: "none",
-        }
+    }
 };
 
 interface Props {
@@ -27,7 +27,7 @@ interface Props {
 export const Modal: FC<Props> = (props) => {
 
     const [modalIsOpen, setIsOpen] = React.useState(props.isOpen);
-    const [typeFrom,setTypeFrom]=useState(false)
+    const [typeFrom, setTypeFrom] = useState(false)
 
     function openModal() {
         setIsOpen(true);
@@ -45,16 +45,16 @@ export const Modal: FC<Props> = (props) => {
     return (
         <div>
             {/*<button onClick={openModal}>Open Modal</button>*/}
-            <ReactModal parentSelector={()=> (document.getElementById('main')!)}
-                isOpen={modalIsOpen}
-                onAfterOpen={afterOpenModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Connect Wallet"
-                overlayClassName={"modal-overlay"}>
-                {!typeFrom ?
-                    <ConnectWallet setTypeFrom={setTypeFrom} onClose={closeModal}/>
-                    :   <div style={{width:"60vw",height:"80vh",background:"transparent"}}>
+            <ReactModal parentSelector={() => (document.getElementById('main')!)}
+                        isOpen={modalIsOpen}
+                        onAfterOpen={afterOpenModal}
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Connect Wallet"
+                        overlayClassName={"modal-overlay"}>
+                {typeFrom ?<></>
+                    // <ConnectWallet setTypeFrom={setTypeFrom} onClose={closeModal}/>
+                    : <div style={{width: "60vw", height: "80vh", background: "transparent"}}>
                         <button onClick={closeModal} className={"modal-close-btn"}>
                 <span>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path
@@ -62,7 +62,8 @@ export const Modal: FC<Props> = (props) => {
                         stroke-linejoin="round"></path></svg>
                 </span>
                         </button>
-                        <Widget id="frbzhUjk" style={{width:"100%",height:"100%", border: "1px solid rgb(45, 16, 212)"}}/>
+                        <Widget id="frbzhUjk"
+                                style={{width: "100%", height: "100%", border: "1px solid rgb(159 153 192)",boxShadow:"0px 0px 20px 2px #888888"}}/>
                     </div>}
                 {props.children}
             </ReactModal>
